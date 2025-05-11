@@ -9,7 +9,7 @@ This repository contains the official implementation of the paper:
 We propose **Spectral Sheaf Filtering (SSF)** — a novel method that utilizes **sheaf theory** to model and learn spatio-temporal dependencies in structured data. SSF introduces a topological perspective into the design of neural networks for graph-based time series prediction, outperforming state-of-the-art baselines on multiple benchmarks.
 
 <p align="center">
-  <img src="SSF.pdf" width="600" />
+  <img src="SSF.png" width="600" />
 </p>
 
 

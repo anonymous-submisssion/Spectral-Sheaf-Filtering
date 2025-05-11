@@ -24,6 +24,7 @@ The sheaf building functions and diffusion models are based on the public reposi
 
 All the used datasets are publicly available. You can download METR-LA and PEMS-BAY datasets from [this link](https://drive.google.com/drive/folders/10FOTa6HXPqX8Pf5WRoRwcFnW9BrNZEIX), Naver-Seoul dataset from [this link](https://drive.google.com/drive/folders/1HjpDu7EjBKvA2e7WrsyPZGFEJL5PhzeG), and PEMS04, PEMS08 from [this link](https://github.com/divanoresia/Traffic)
 
+Follow the instructions in [This repo](https://github.com/HyunWookL/PM-MemNet) to generate the train, validation, test splits.
 The dataset folders should be structured as:
 ```
 Datasets

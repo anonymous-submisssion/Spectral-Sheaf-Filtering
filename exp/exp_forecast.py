@@ -129,7 +129,7 @@ class Forecast(object):
                 scaler.transform(data['x_' + category][..., 0].numpy().reshape(-1, 1)).reshape(data['x_' + category][..., 0].shape), 
                 dtype=torch.float32
             )
-            if 'PEMS' not in self.args.data_name:
+            if 'METR' in self.args.data_name or 'BAY' in self.args.data_name:
                 data['y_' + category][..., 0] = torch.tensor(
                     scaler.transform(data['y_' + category][..., 0].numpy().reshape(-1, 1)).reshape(data['y_' + category][..., 0].shape), 
                     dtype=torch.float32
@@ -327,7 +327,7 @@ class Forecast(object):
         folder_path = './results/' + setting + '/'
         if not os.path.exists(folder_path):
             os.makedirs(folder_path)
-        plot_and_save_matrices(preds[:, :, 0], trues[:, :, 0], './forecast_comparison.pdf')
+        plot_and_save_matrices(preds[:, :, 0], trues[:, :, 0], './' + self.args.model_id + '_forecast_comparison.pdf')
 
         mae, mse, rmse, mape, mspe = metric(preds, trues)
         print('mse:{}, mae:{}, rmse:{}, mape:{}'.format(mse, mae, rmse, mape))

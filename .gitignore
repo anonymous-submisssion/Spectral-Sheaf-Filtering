@@ -11,3 +11,4 @@ analysis_results/
 result_imputation.txt
 result_forecast.txt
 forecast_comparison.png
+*.pyc
